@@ -1,0 +1,191 @@
+# espanso configuration file
+
+# This is the default configuration file, change it as you like it
+# You can refer to the official documentation:
+# https://espanso.org/docs/
+# Matches are the substitution rules, when you type the "trigger" string
+# it gets replaced by the "replace" string.
+secure_input_notification: false
+
+matches:
+  # Name
+  - trigger: ":me"
+    replace: "Tommi"
+
+  - trigger: ":name"
+    replace: "Tommaso Marmo"
+
+  - trigger: ":x"
+    replace: "xplosionmind"
+
+  - trigger: ":cite"
+    replace: "<p class=\"cite\">$|$, <cite></cite></p>"
+
+  - trigger: "???"
+    replace: "<b class=\"wtf\">???</b>"
+
+  - trigger: "+++"
+    replace: "<b class=\"missing\">+++</b>"
+
+  - trigger: ":piwigoembed"
+    replace: "https://images.tommi.space/plugins/download_by_size/action.php?id=$|$&part=e&size=medium"
+
+  - trigger: "<a"
+    replace: "<a href=\"\" target=\"_blank\" title=\"\">$|$</a>"
+
+  - trigger: ":br"
+    replace: "<br>"
+
+  - trigger: ":pise"
+    replace: "Philosophy, International Studies and Economics"
+
+  - trigger: "expanso"
+    replace: "espanso"
+
+  - trigger: ":email"
+    replace: "lost.in@tommi.space"
+
+  - trigger: ":surf"
+    replace: "surfing@tommi.space"
+
+  - trigger: ":server"
+    replace: "167.86.82.148"
+
+  - trigger: ":anonaddy"
+    replace: "98f32f9a-10d9-4cf2-a79a-651395b57c70@anonaddy.me"
+
+  - trigger: ":feedbin"
+    replace: "ad2b8d40@newsletters.feedbin.com"
+
+  - trigger: ":xpic"
+    replace: "xplosionpictures@puzzolina.tk"
+
+  - trigger: "htt"
+    replace: "https://"
+
+  - trigger: ":site"
+    replace: "https://tommi.space"
+
+  - trigger: ":qsm"
+    replace: "https://quitsocialmedia.club"
+
+  - trigger: ":assets"
+    replace: "https://assets.tommi.space"
+
+  - trigger: ":riunione"
+    replace: "https://call.scambi.org/riunione"
+
+  - trigger: ":avatar"
+    replace: "https://assets.tommi.space/images/avatar.png"
+
+  - trigger: ":profile"
+    replace: "https://assets.tommi.space/images/profile.jpg"
+
+  - trigger: "UU"
+    replace: "<u>"
+
+  - trigger: "Uu"
+    replace: "</u>"
+
+  - trigger: "QQ"
+    replace: "<q>"
+
+  - trigger: "Qq"
+    replace: "</q>"
+
+  - trigger: ":loop"
+    replace: |
+              {% for a in site.cose %}
+              {% endfor %}
+
+  - trigger: ":if"
+    replace: |
+              {% if site.cosa == '4' %}
+              {% endif %}
+
+  - trigger: ":unless"
+    replace: |
+              {% unless site.cosa a == '7' %}
+              {% endunless %}
+
+  # Dates
+  - trigger: ":ydt"
+    replace: "date: {{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%+"
+  
+  - trigger: ":up"
+    replace: "updated: {{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%+"
+  
+  - trigger: ":hdt"
+    replace: "<p class=\"date\">{{mydate}}</p>"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%e %B %Y"
+
+  - trigger: ":qdt"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y.%m.%d"
+
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%A %e %B %Y"
+
+  - trigger: ":fm"
+    replace: |
+              ---
+              date: {{mydate}}
+              updated: {{mydate}}
+              tags: 
+              ---
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%+"
+
+  - trigger: ":analog"
+    replace: |
+              ---
+              date: $|$
+              tags: analog/jarvis
+              ---
+# Shell commands
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo Hello from your shell"
+
+  # GDPR quit
+  - trigger: ":gdpren"
+    replace: "Good evening, I'd like to claim my GDPR rights of access, erasure, portability (Art. 15, Art. 17 and Art. 20 respectively) requesting the complete erasure my account and email address and the permanent deletion from your database of all the data related to it. After the erasure has taken place, I request also the deletion of the record of these email communication.\n\nThank you very much.\nBest regards."
+
+  - trigger: ":gdprenp"
+    replace: "Good afternoon, I'd like to claim my GDPR rights of access, erasure, portability (Art. 15, Art. 17 and Art. 20 respectively) by receiving a copy of all my data in your possession. After that, I request the complete and permanent deletion of my account and the complete erasure from your database of all the data linked to it.  After the erasure has taken place, I request also the deletion of the record of these emails.\n\nThank you very much.\nBest regards."
+
+  - trigger: ":gdprit"
+    replace: "Buongiorno, in accordo con il regolamento GDPR, desidererei esercitare il mio diritto di accesso, eliminazione e portabilità dei dati (rispettivamente trattati negli articoli 15, 17 e 20) richiedendo la completa eliminazione del mio account dal vostro database, insieme a tutti i dati ad esso collegati, così come lo storico di tutte le mie attività. A seguito dell'eliminazione dell'account, desidero richiedere anche la totale eliminazione di questo scambio di email.\n\nGrazie mille.\nCordiali Saluti."
+
+  - trigger: ":gdpritp"
+    replace: "Buongiorno, in accordo con il regolamento GDPR, desidererei esercitare il mio diritto di accesso, eliminazione e portabilità dei dati (rispettivamente trattati negli articoli 15, 17 e 20) ricevendo una copia di tutti i miei dati in vostro possesso e conseguentemente richiedendo la completa eliminazione di questi dal vostro database, insieme a tutte le informazioni ad essi collegate, così come lo storico di tutte le mie attività. A seguito dell'eliminazione dell'account, desidero richiedere anche la totale eliminazione del registro di questa email e di questo scambio.\n\nGrazie mille.\nCordiali Saluti."

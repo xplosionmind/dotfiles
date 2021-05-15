@@ -1,0 +1,27 @@
+cr_sdk_initialize: Adobe Photoshop Lightroom Classic 9.4 (Macintosh), version 12.4x555, 64-bit, Release
+gDNGMaxSIMD: 3
+Memory allocator: baseline (cr_memory_allocator)
+TBB threading: no
+PatchMatch initialized (version 4.0.0.0). Using 8 threads.
+OS: 10.16
+CPU: Intel(R) Core(TM) i5-8257U CPU @ 1.40GHz
+MPProcessorCount (hyperthreading = false): 4
+MPProcessorCount (hyperthreading = true): 8
+MPThreadCount: 5
+std::thread::hardware_concurrency: 8
+AVX support: yes
+AVX2 support: yes
+AVX512 support: no
+System physical RAM: 8 GB
+Initialize GPU system
+Read GPU config
+Safe load GPU
+Loaded GPU system: Metal
+GPU primary driver version: 10.16.0
+GPU device count: 1
+GPU device names: Intel(R) Iris(TM) Plus Graphics 645
+GPU3 white list: no
+GPU3 black list: no
+GPU3 prev digest: E5FF7E1BF9EC973C12E79D9B778C5856
+GPU3 new digest: E5FF7E1BF9EC973C12E79D9B778C5856
+Need to run gpu self tests : False.

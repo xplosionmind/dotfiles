@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<FileZilla3 version="3.53.1" platform="mac">
+	<Layout Builddate="2021-03-22" Buildtime="16:33:58">
+		<Resources>
+			<xrc file="netconfwizard.xrc" date="1616427298" />
+			<xrc file="settings.xrc" date="1594797744" />
+			<xrc file="certificate.xrc" date="1583926159" />
+			<xrc file="storj.xrc" date="1594797744" />
+			<xrc file="dialogs.xrc" date="1616427298" />
+		</Resources>
+		<Language id="default">
+			<Font font="0;13;70;90;90;0;.AppleSystemUIFont;49" width="779" height="15" />
+			<Dialog name="Settings" width="537" />
+		</Language>
+	</Layout>
+</FileZilla3>

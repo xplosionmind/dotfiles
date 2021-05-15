@@ -1,0 +1,43 @@
+[user]
+	name		= Tommi
+	email		= surfing@tommi.space
+[github]
+	user		= xplosionmind
+[alias]
+	a			= add
+	aa			= add -A
+	ca			= commit -a
+	cam			= commit -am
+	cm			= commit -m
+	cmu			= commit -m update
+	s			= status
+	p			= push
+	pom			= push origin master
+	pog			= push origin gh-pages
+	puom		= pull origin master
+	puog		= pull origin gh-pages
+	cob			= checkout -b
+	co			= checkout
+	fp			= fetch --prune --all
+	l			= log --oneline --decorate --graph
+	lall		= log --oneline --decorate --graph --all
+	ls			= log --oneline --decorate --graph --stat
+	lt			= log --graph --decorate
+	d			= diff --minimal --summary
+[core]
+	excludesFile = ~/.gitignore
+	autocrlf	= input
+	editor		= nvim
+[color]
+	ui			= auto
+[filter "lfs"]
+	clean		= git-lfs clean -- %f
+	smudg		= git-lfs smudge -- %f
+	process		= git-lfs filter-process
+	required	= true
+[submodule]
+	recurse		= true
+[credential]
+	helper		= osxkeychain
+[init]
+	defaultBranch = main

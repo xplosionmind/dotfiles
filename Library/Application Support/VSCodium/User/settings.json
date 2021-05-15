@@ -1,0 +1,8 @@
+{
+    "editor.cursorBlinking": "smooth",
+    "editor.fontFamily": "'Ubuntu Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.autoClosingDelete": "always",
+    "editor.autoClosingBrackets": "always",
+    "editor.wordWrap": "on"
+}
