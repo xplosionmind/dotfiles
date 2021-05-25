@@ -4,5 +4,7 @@
     "editor.fontSize": 14,
     "editor.autoClosingDelete": "always",
     "editor.autoClosingBrackets": "always",
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false
 }

@@ -23,7 +23,9 @@
 	lall		= log --oneline --decorate --graph --all
 	ls			= log --oneline --decorate --graph --stat
 	lt			= log --graph --decorate
-	d			= diff --minimal --summary
+	D			= diff --minimal --summary --histogram
+	d			= diff --histogram
+	sub			= submodule
 [core]
 	excludesFile = ~/.gitignore
 	autocrlf	= input
@@ -36,10 +38,12 @@
 	process		= git-lfs filter-process
 	required	= true
 [submodule]
-	recurse		= true
+	recurse = true
 [credential]
 	helper		= osxkeychain
 [init]
 	defaultBranch = main
 [pull]
 	rebase = true
+[diff]
+	submodule = log

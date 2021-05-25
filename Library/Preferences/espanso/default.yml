@@ -51,8 +51,8 @@ matches:
   - trigger: ":server"
     replace: "167.86.82.148"
 
-  - trigger: ":anonaddy"
-    replace: "98f32f9a-10d9-4cf2-a79a-651395b57c70@anonaddy.me"
+  - trigger: ":@services"
+    replace: "y3c4h16e@anonaddy.me"
 
   - trigger: ":feedbin"
     replace: "ad2b8d40@newsletters.feedbin.com"
