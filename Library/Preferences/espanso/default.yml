@@ -73,13 +73,16 @@ matches:
     replace: "https://assets.tommi.space"
 
   - trigger: ":riunione"
-    replace: "https://call.scambi.org/riunione"
+    replace: "https://riunione.scambi.org"
 
   - trigger: ":avatar"
     replace: "https://assets.tommi.space/images/avatar.png"
 
   - trigger: ":profile"
     replace: "https://assets.tommi.space/images/profile.jpg"
+
+  - trigger: ":gh"
+    replace: "https://github.com/"
 
   - trigger: "UU"
     replace: "<u>"

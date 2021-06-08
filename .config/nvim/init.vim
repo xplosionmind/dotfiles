@@ -10,6 +10,7 @@ set mouse=a
 set showcmd
 set inccommand=nosplit
 set spelllang=it
+set noshowmode "does not show the status since it appears in lightline.vim
 autocmd BufReadPost *
       \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit'
       \ |   exe "normal! g`\""
@@ -23,27 +24,29 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'junegunn/fzf.vim'
-Plug 'itchyny/lightline.vim'
-Plug 'editorconfig/editorconfig-vim'
-"Plug 'vim-scripts/c.vim'
-"Plug 'rip-rip/clang_complete'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'w0rp/ale'
-Plug 'scrooloose/nerdtree'
-"Plug 'Shougo/deoplete.nvim'
-"Plug 'terryma/vim-multiple-cursors'
-Plug 'sheerun/vim-polyglot'
-Plug 'mbbill/undotree'
-Plug 'gko/vim-coloresque'
+Plug 'junegunn/fzf.vim'               "fzf implementation
+Plug 'itchyny/lightline.vim'          "status line
+Plug 'editorconfig/editorconfig-vim'  "consistent coding styles
+Plug 'ryanoasis/vim-devicons'         "add icons to plugins
+Plug 'tpope/vim-fugitive'             "git implementation
+Plug 'tpope/vim-surround'             "quickly edit surroundings
+Plug 'dense-analysis/ale'             "syntax checker
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin' "navigation with git integration…
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "…and syntax highlight
+Plug 'sheerun/vim-polyglot'           "language pack
+Plug 'mbbill/undotree'                "undo history visualizer
+Plug 'gko/vim-coloresque'             "color preview
+Plug 'junegunn/goyo.vim'              "writing focused layout
+Plug 'mattn/emmet-vim'                "easier and quicker HTML writing
+Plug  'mg979/vim-visual-multi'        "multiple cursors
+Plug 'Shougo/deoplete.nvim'           "autocompletion
 
-" MARKDOWN
+"Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-"Plug 'mzlogin/vim-markdown-toc'
-Plug 'junegunn/goyo.vim'
+Plug 'mzlogin/vim-markdown-toc'      "generate table of contents
 
-" LaTeX
+"LaTeX
 Plug 'lervag/vimtex'
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
@@ -51,13 +54,11 @@ let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
 
-"HTML
-Plug 'tmhedberg/matchit'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-ragtag'
-Plug 'mattn/emmet-vim'
+"C
+"Plug 'vim-scripts/c.vim'
+"Plug 'rip-rip/clang_complete'
 
-"THEMES
+"Themes
 "Plug 'dracula/dracula-theme'
 "Plug 'phanviet/vim-monokai-pro'
 "Plug 'altercation/vim-colors-solarized'
