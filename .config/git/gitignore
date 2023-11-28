@@ -1,0 +1,16 @@
+# system
+._*
+.~lock*
+.trash
+.Trash
+.sync*
+.nextcloudsync.log
+.cache
+
+# pnpm
+pnpm-lock.*
+
+# Tommi
+.obsidian
+private
+copyrighted-content
