@@ -16,6 +16,9 @@
 	editor				= interactive-rebase-tool
 [pull]
 	rebase				= true
+[push]
+	default				= simple
+	autoSetupRemote = true
 [commit]
 	gpgsign				= true
 [alias]
