@@ -1,0 +1,6 @@
+alias zshconfig="nvim ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias vi="nvim"
+alias vim="nvim"
+alias ra="ranger"
+alias rn="ranger"
