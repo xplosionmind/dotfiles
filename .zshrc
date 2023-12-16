@@ -28,4 +28,5 @@ plugins=(
 	zsh-autosuggestions
 	zsh-interactive-cd
 )
+eval "$(mcfly init zsh)"
 source $ZSH/oh-my-zsh.sh
