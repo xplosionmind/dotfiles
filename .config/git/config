@@ -6,7 +6,7 @@
 	defaultBranch	= main
 [core]
 	editor				= nvim
-	excludesFile	= ~/.config/git/gitignore
+	excludesFile	=	/home/tommi/.config/git/ignore
 [rerere]
 	enabled				= true
 	autoupdate		= true
@@ -37,8 +37,8 @@
 	cmu = commit -S -m update
 	cam = commit -S -am
 	camu = commit -S -am update
-	cd = commit --amend
-	cad = commit -a --amend
+	cd = commit -S --amend
+	cad = commit -S -a --amend
 	cl = clone
 	d = diff
 	dt = difftool
